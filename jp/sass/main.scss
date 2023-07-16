@@ -1,0 +1,26 @@
+//VARIABLE FUNCTION MIXINS FILES
+@import "abstract/variables";
+@import "abstract/functions" ;
+@import "abstract/mixins" ;
+
+//ANIMATIONS BASE=>BASIC STRUCTERS FOR ALL ELEMENTS TYPOGRAPHY=>ANYTHIMG RELATED TO TEXT 
+@import "basee/animation";
+@import "basee/base";
+@import "basee/typography";
+@import "basee/utilities";
+
+@import "components/button-travel";
+@import "components/composition";
+
+@import "layout/header";
+@import "layout/grid";
+
+@import "basee/typography";
+
+@import "home/homepage";
+
+
+
+
+
+
