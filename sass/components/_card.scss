@@ -1,0 +1,124 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 58rem;
+  &__side {
+    background-color: rgb(240, 240, 240);
+    color: black;
+    font-size: 2rem;
+    height: 58rem;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 1.5rem 4rem rgba(255, 255, 255, 0.327);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: 0.8s all;
+    &-front {
+      background-color: rgb(240, 240, 240);
+    }
+    &-back {
+      transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(to bottom left, $card1, $card1-dark);
+      }
+      &-2 {
+        background-image: linear-gradient(to bottom left, $card2, $card2-dark);
+      }
+      &-3 {
+        background-image: linear-gradient(to bottom left, $card3, $card3-dark);
+      }
+    }
+  }
+  &:hover &__side-front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side-back {
+    transform: rotateY(0);
+  }
+  &__picture {
+    height: 25rem;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    &-1 {
+      background-image: linear-gradient(
+          to bottom left,
+          rgba($card1, 0.3),
+          rgba($card1-dark, 0.5)
+        ),
+        url(../img/card1.jpg);
+    }
+    &-2 {
+      background-image: linear-gradient(
+          to bottom left,
+          rgba($card2, 0.6),
+          rgba($card2-dark, 0.8)
+        ),
+        url(../img/card2.jpg);
+    }
+    &-3 {
+      background-image: linear-gradient(
+          to bottom left,
+          rgba($card3, 0.6),
+          rgba($card3-dark, 0.7)
+        ),
+        url(../img/card-3.jpg);
+    }
+  }
+  &__heading {
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: white;
+    position: absolute;
+    top: 6.5rem;
+    right: 2rem;
+    text-align: right;
+    width: 65%;
+  }
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone;
+    &-1 {
+      background-image: linear-gradient(
+        to bottom left,
+        rgba($card1, 0.3),
+        rgba($card1-dark, 0.5)
+      );
+    }
+    &-2 {
+      background-image: linear-gradient(
+        to bottom left,
+        rgba($card2, 0.6),
+        rgba($card2-dark, 0.8)
+      );
+    }
+    &-3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($card3, 0.6),
+        rgba($card3-dark, 0.7)
+      );
+    }
+  }
+  &__Details {
+    padding: 3rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      li {
+        text-align: center;
+        padding: 1rem;
+        &:not(:last-child) {
+          border-bottom: 2px #838181 solid;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.row {
+  max-width: 144rem;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: 8rem;
+  }
+  @include clearfix;
+  [class^="col"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gapright;
+    }
+  }
+
+  .col1of2 {
+    width: calc((100% - 6rem) / 2);
+  }
+  .col1of3 {
+    width: calc((100% - (2 *#{$gapright})) / 3);
+  }
+  .col2of3 {
+    width: calc(2 * ((100% - (#{$gapright}* 2)) / 3) + 6rem);
+  }
+  .col1of4 {
+    width: calc((100% - (3 *#{$gapright})) / 4);
+  }
+  .col2of4 {
+    width: calc(2 * ((100% - (3 *#{$gapright})) / 4) + #{$gapright});
+  }
+  .col3of4 {
+    width: calc(3 * ((100% - (3 *#{$gapright})) / 4) + 2 *#{$gapright});
+  }
+}

@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+
+html{   
+    //DEFINE THE 1REM
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: $dark-grey;
+    padding: 2rem;
+}
